@@ -1,0 +1,47 @@
+1. Please list all sources (people, books, webpages, etc.) you consulted regarding this assignment and how they helped: (Sources can be used broadly as reference for the general approach; YOU MUST NOT COPY CODE!)
+
+CSCE 221 Students: 
+
+Other People: PTs, helped work through mistakes in code
+
+Printed Material: 
+
+Websites: stackoverflow for answering questions
+
+Other: Singly Linked List code from CSCE 121, helped me write code for DoublyLinkedList
+
+
+
+
+
+2. Why is the overloaded operator<< a defined outside the class rather than as a member function?  What is the purpose of "friend" in a case like this?
+
+It is a friend because it is not a function that is explicitly used in the DoublyLinkedList class, rather used as a function to assist the creation of other functions such as the toString function. 
+
+
+3. Why is the overloaded operator<< inline in the NetworkPacket class?  Can you think of an alternative to prevent the potential problem?
+
+The operator is labeled as inline for optimization purposes, allowing the compiler to perform context specific optimization. With an ostream operator, sometimes the program will not execute properly if there is anything wrong with the NetworkPacket object.
+
+
+4. Why does the Node not need a destructor, and thus not be applicable for the Rule of Three?
+
+The Node doesn't need a destructor because whenever the DoublyLinkedList destructor is called, Nodes are deleted in the process. When Nodes are used in Doubly Linked List functions, they are always pointers instead of creating an entirely new Node, so deleting them is not needed.
+
+
+5. Give an example of when a doubly-linked list may be advantageous over a singly-linked one.
+
+A Doubly Linked List can be traversed in both forward and backward direction, so if data in a node before a given index needs to be accessed, it can be done so easily using a pointer. Whereas in a singly-linked list, one can only traverse forward.
+
+
+6. How many steps does it take to pop_front() from the queue to get the next item?  That is, if we think about the number of computations needed to get the next element in the queue as the queue grows to any arbitrary size, how complex is the pop_front() (also called "dequeue") operation?
+
+The pop_front() function is very simple, as it only calls the remove() function from DoublyLinkedList, so one step of removal from the queue consists of the steps that it takes for the remove() function to identify that index = 0 and operate accordingly.
+
+7. What is an advantage of templated classes?
+
+Generalizing typing with templated classes is safer and helps to avoid common errors that occur when programs are function-heavy.
+
+8. When creating a templated version of the DoublyLinkedList, why do you need to put "template class DoublyLinkedList<>" for each type at the bottom of the source file?
+
+Without those lines at the bottom of the source file, the program won't know what is being specified by "type T" and the program will not run properly.

@@ -1,0 +1,25 @@
+1. Please list all sources (people, books, webpages, etc.) you consulted regarding this assignment and how they helped: (Sources can be used broadly as reference for the general approach; YOU MUST NOT COPY CODE!)
+
+CSCE 221 Students: Ashwin Kundeti, helped me debug
+
+Other People: Seth Polsley, also helped with debugging
+
+Printed Material: Lecture Material #35
+
+Websites: 
+
+Other: 
+
+
+2. Describe the approach you used to implement Dijkstra's algorithm.  This should include a description of the data structures you used and if they come from STL, your own implementation, or other (such as the provided Locator Heap).
+The approach that I used to implement Dijkstra's algorithm was following the psuedocode given in seth's lecture, where the path of the parent is saved onto the current node in addition to the current node itself, which allows me to just return the path of the end node rather than append anything else onto it. I also used the "visited" flag to determine when to break the while loop that builds the path.
+
+
+
+3. Describe another approach which could be used to implement Dijkstra's algorithm.  For instance, this could include a contrast between storing flags such as "visited" in an auxillary structure as opposed to inside the vertex.
+Another approach to implement Dijkstra's algorithm is instead of appending every node onto it's path, simply recording itself and moving onto the next node in the path. This method doesn't have to record the parent of the node, making traversal slighly less time consuming. Another method is using the LocatorHeap as a condition for path traversal, such as allowing the while loop to terminate once the locator heap is empty using the isEmpty() function.
+
+
+
+4. Give an example of using an STL data structure such as map or unordered_map to store and access auxillary data used in Dijkstra's algorithm.
+An STL structure such as a map or unordered_map could be used to store data used in Dijsktra's algorithm could be to store edge data for each node, such as the key being the index of the node and the data contained being the edges that connect that node to other nodes in the graph.

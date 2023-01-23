@@ -1,0 +1,12 @@
+Please list all sources (people, books, webpages, etc.) you consulted regarding this assignment and how they helped: (Sources can be used broadly as reference for the general approach; YOU MUST NOT COPY CODE!)
+
+CSCE 221 Students:
+
+Other People: PTs and Seth Polsley, helped work through mistakes in code
+
+Printed Material:
+
+Websites: Lecture material on canvas
+
+Other:
+

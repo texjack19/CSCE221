@@ -1,0 +1,32 @@
+Please list all sources (people, books, webpages, etc.) you consulted regarding this assignment and how they helped: (Sources can be used broadly as reference for the general approach; YOU MUST NOT COPY CODE!)
+
+CSCE 221 Students: Bhargav Akula, helped with get() function on ProbingHashTable
+Ashwin Kundeti, helped with insert() on ChainingHashTable
+
+Other People: Seth Polsley, answered questions and worked through errors in code
+
+
+Printed Material: 
+
+Websites: stack overflow, used to look up vector functions
+
+Other: 
+
+
+2. Regarding inheritance, what are pure virtual functions?
+Pure virtual functions are meant solely for declaration. For example, when used in this PA, pure virtual functions are declared in HashTable.h, but for different types of HashTable, they share the same function, but it may be defined differently.
+
+
+
+3. What are you observations on the runtime of the different hash table methods?
+The Chaining method takes slightly less time than the Probing method, since with Chaining, insertion is a lot less time consuming since you don't have to loop through the table in the case of a collision.
+
+
+
+4. We did an extremely simplified blockchain and cryptocurrency, using the requirement that the hash only needs to begin with '2'.  What mining approach did you create to try to find a valid nonce?
+The mining approach that I implemented to try and find a valid nonce was using a while loop that appended characters 0-z to the nonce until it generates a valid hash, using sign_block to return whether or not it is valid.
+
+
+
+5. How might you approach this problem differently with a more restrictive problem?  For instance, if you change the validator to require the hash begin with "221", you will find the mining operation takes significantly more time.  Briefly discuss this in the context of modern cryptocurrency mining.
+Continuously appending chars to a nonce until a valid hash is obtained could be quite time consuming if the conditions are more restrictive. I could possibly construct the mining function with restrictions in mind to make it less time consuming. Modern cryptocurrency mining, however, likely has much more complex restrictions when it comes to generating hashes, which is why the process of crypto mining is so time and power intensive.
